@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Temukan inspirasi furniture untuk setiap ruang di rumah bersama Rendi Living."
+    />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>Rendi Living — Furniture untuk Cerita di Rumah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Rendi Living, beranda">
+        <span class="brand-mark" aria-hidden="true">r.</span>
+        <span class="brand-name">rendi<span>living</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="#koleksi">Koleksi</a>
+        <a href="#tentang">Tentang kami</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Mode gelap"
+          aria-pressed="false"
+          title="Aktifkan mode gelap"
+        >
+          <svg class="theme-icon theme-icon-moon" data-theme-icon="moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.6 8.6 0 1 0 20.2 15.3Z" />
+          </svg>
+          <svg class="theme-icon theme-icon-sun" data-theme-icon="sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+          </svg>
+        </button>
+        <a class="header-cta" href="#koleksi">
+          Jelajahi koleksi <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="ruang_tamu/image1.jpeg"
+          alt="Ruang keluarga hangat dengan sofa berwarna netral"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Ruang yang terasa seperti rumah</p>
+          <h1 id="hero-title">Temukan indahnya<br />pulang ke rumah.</h1>
+          <p class="hero-description">
+            Furniture pilihan untuk menemani setiap cerita, di setiap sudut rumahmu.
+          </p>
+          <a class="button button-light" href="#koleksi">
+            Lihat koleksi <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="hero-note"><span>01</span> / 10 ruang inspirasi</div>
+      </section>
+
+      <section class="catalog-section" id="koleksi" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark">Pilihan untuk setiap ruang</p>
+            <h2 id="catalog-title">Koleksi <em>kami</em></h2>
+          </div>
+          <p class="section-intro">
+            Dari sudut paling nyaman hingga ruang berkumpul, temukan inspirasi yang pas untuk rumahmu.
+          </p>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="category-list" id="category-list" aria-label="Filter kategori"></div>
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="visually-hidden">Cari koleksi</span>
+            <input id="search-input" type="search" placeholder="Cari koleksi..." autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="results-line">
+          <p id="result-count" aria-live="polite"></p>
+          <label class="sort-control">
+            Urutkan
+            <select id="sort-select" aria-label="Urutkan koleksi">
+              <option value="featured">Pilihan kami</option>
+              <option value="name">Nama A–Z</option>
+              <option value="category">Kategori</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>
+          Koleksi tidak ditemukan. Coba kata kunci atau kategori lain.
+        </p>
+      </section>
+
+      <section class="about-section" id="tentang">
+        <div class="about-mark" aria-hidden="true">r.</div>
+        <div>
+          <p class="eyebrow eyebrow-dark">Rumah punya ceritanya sendiri</p>
+          <h2>Ruang yang nyaman,<br /><em>cerita yang berarti.</em></h2>
+        </div>
+        <p class="about-copy">
+          Kami percaya setiap sudut rumah punya arti. Jelajahi inspirasi furniture yang menghadirkan
+          kehangatan dan karakter untuk ruang favoritmu.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="Rendi Living, kembali ke atas">
+        <span class="brand-mark" aria-hidden="true">r.</span>
+        <span class="brand-name">rendi<span>living</span></span>
+      </a>
+      <p>Temukan rasa nyaman di setiap ruang.</p>
+      <span class="copyright">© <span id="year"></span> Rendi Living</span>
+    </footer>
+
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Tutup detail">×</button>
+      <div class="dialog-content" id="dialog-content"></div>
+    </dialog>
+  </body>
+</html>
